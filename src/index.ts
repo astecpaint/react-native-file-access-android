@@ -40,7 +40,7 @@ function registerFetchListener(
   reject: (e: Error) => void,
   onProgress?: ProgressListener
 ) {
-  const listener = FileAccessEventEmitter.addListener(
+  const listener = FileAccessEventEmitter?.addListener(
     'FetchEvent',
     (event: FetchEvent) => {
       if (event.requestId !== requestId) {
@@ -50,10 +50,10 @@ function registerFetchListener(
       if (event.state === 'progress') {
         onProgress?.(event.bytesRead, event.contentLength, event.done);
       } else if (event.state === 'error') {
-        listener.remove();
+        listener?.remove();
         reject(new Error(event.message));
       } else if (event.state === 'complete') {
-        listener.remove();
+        listener?.remove();
         resolve({
           headers: event.headers,
           ok: event.ok,

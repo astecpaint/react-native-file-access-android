@@ -9,7 +9,7 @@ import type {
 } from './types';
 
 export const FileAccessEventEmitter =
-  Platform === 'android'
+  Platform.OS === 'android'
     ? new NativeEventEmitter(NativeModules.RNFileAccess)
     : null;
 
