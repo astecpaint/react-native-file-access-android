@@ -1,4 +1,4 @@
-import { NativeEventEmitter, NativeModules } from 'react-native';
+import { NativeEventEmitter, NativeModules, Platform } from 'react-native';
 import type {
   AssetType,
   Encoding,
@@ -8,9 +8,10 @@ import type {
   HashAlgorithm,
 } from './types';
 
-export const FileAccessEventEmitter = new NativeEventEmitter(
-  NativeModules.RNFileAccess
-);
+export const FileAccessEventEmitter =
+  Platform === 'android'
+    ? new NativeEventEmitter(NativeModules.RNFileAccess)
+    : null;
 
 type FileAccessType = {
   appendFile(path: string, data: string, encoding: Encoding): Promise<void>;

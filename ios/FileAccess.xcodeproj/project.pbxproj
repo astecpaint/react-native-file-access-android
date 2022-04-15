@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 
+		5E555C0D2413F4C50049A1A2 /* FileAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* FileAccess.m */; };
 
-		F4FF95D7245B92E800C19C63 /*  FileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  FileAccess.swift */; };
-
-		5E555C0D2413F4C50049A1A2 /* FileAccess.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* FileAccess.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +27,8 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libFileAccess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFileAccess.a; sourceTree = BUILT_PRODUCTS_DIR; };
 
-
+		B3E7B5881CC2AC0600A0062D /* FileAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileAccess.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* FileAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileAccess.m; sourceTree = "<group>"; };
-		F4FF95D5245B92E700C19C63 /* FileAccess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FileAccess-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4FF95D6245B92E800C19C63 /* FileAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAccess.swift; sourceTree = "<group>"; };
 
 /* End PBXFileReference section */
 
@@ -59,10 +55,8 @@
 			isa = PBXGroup;
 			children = (
 
-
-				F4FF95D6245B92E800C19C63 /* FileAccess.swift */,
+				B3E7B5881CC2AC0600A0062D /* FileAccess.h */,
 				B3E7B5891CC2AC0600A0062D /* FileAccess.m */,
-				F4FF95D5245B92E700C19C63 /* FileAccess-Bridging-Header.h */,
 
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
@@ -126,8 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 
-
-				F4FF95D7245B92E800C19C63 /* FileAccess.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* FileAccess.m in Sources */,
 
 			);
@@ -243,10 +235,6 @@
 				PRODUCT_NAME = FileAccess;
 				SKIP_INSTALL = YES;
 
-				SWIFT_OBJC_BRIDGING_HEADER = "FileAccess-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-
 			};
 			name = Debug;
 		};
@@ -263,9 +251,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = FileAccess;
 				SKIP_INSTALL = YES;
-
-				SWIFT_OBJC_BRIDGING_HEADER = "FileAccess-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
 
 			};
 			name = Release;
